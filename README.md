@@ -77,6 +77,8 @@ Publish the website in the given URL.
 ```
 
 #OUTPUT
+![alt text](<Screenshot 2025-12-18 231644.png>)
+![alt text](<Screenshot 2025-12-18 231704.png>)
 
 
 
