@@ -29,6 +29,54 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 # PROGRAM :
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lamp Power Calculator</title>
+ <style>
+        body {
+            background-image: url('image.avif');
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            color: rgb(3, 3, 3);
+            }
+        input {
+            margin-bottom: 10px;
+            color: rgb(13, 13, 13);
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="font-size: xx-large;">Power of Lamp Filament</h2>
+    <label style="font-size: larger;">Intensity (I): </label>
+    <input type="number" id="intensity"><br><br>
+    <label style="font-size: larger;">Resistance (R): </label>
+    <input type="number" id="resistance"><br><br>
+    <button onclick="calculatePower()">Calculate Power</button>
+    <h3 id="result"></h3>
+    <script>
+        function calculatePower() {
+            let I = Number(document.getElementById("intensity").value);
+            let R = Number(document.getElementById("resistance").value);
+            let P = I * I * R; 
+            document.getElementById("result").innerHTML = "Power = " + P + " watts";
+        }
+    </script>
+
+</body>
+</html>
+
+#OUTPUT
+
+
 # SERVER SIDE PROCESSING:
 # HOMEPAGE:
 # RESULT:
