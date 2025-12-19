@@ -29,6 +29,31 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 # PROGRAM :
+views.py
+```
+from django.shortcuts import render
+
+def home(request):
+    power = None
+
+    if request.method == "POST":
+        I = float(request.POST.get("intensity"))
+        R = float(request.POST.get("resistance"))
+        power = I * I * R  # Formula P = I²R
+
+    return render(request, "mathexp/formula.html", {"power": power})
+
+```
+urls.py
+```
+from django.contrib import admin
+from django.urls import path
+from mathexp.views import home
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home),
+]
 ```
 
 <!DOCTYPE html>
