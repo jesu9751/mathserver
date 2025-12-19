@@ -55,7 +55,9 @@ urlpatterns = [
     path('', home),
 ]
 ```
+htmlfile
 
+```
 <!DOCTYPE html>
 <html>
 <head>
